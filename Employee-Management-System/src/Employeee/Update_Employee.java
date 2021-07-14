@@ -15,10 +15,10 @@ class Update_Employee extends Add_Employee implements ActionListener{
 
     Update_Employee(String idaa){
         super(0);
-        f=new JFrame("update Employee details");
+        f=new JFrame("Update Employee details");
         f.setVisible(true);
         f.setSize(900,500);
-        f.setLocation(450,250);
+        f.setLocation(300,150);
         f.setBackground(Color.white);
         f.setLayout(null);
 
@@ -113,7 +113,9 @@ class Update_Employee extends Add_Employee implements ActionListener{
         id10.setBounds(50,300,150,30);
         id10.setFont(new Font("serif",Font.BOLD,20));
         id15.add(id10);
+        
         f.setVisible(false);
+        
         t9=new JTextField();
         t9.setBounds(200,300,150,30);
         id15.add(t9);
@@ -139,7 +141,7 @@ class Update_Employee extends Add_Employee implements ActionListener{
             conn con = new conn();
             String str = "select * from employee where emp_id = '"+s+"'";
             ResultSet rs = con.s.executeQuery(str);
-
+            
             if(rs.next()){
                 f.setVisible(true);
                 i=1;
@@ -161,20 +163,18 @@ class Update_Employee extends Add_Employee implements ActionListener{
                 JOptionPane.showMessageDialog(null,"Id not found");
             new Search_Employee();
         }catch(Exception ex){}
-        f.setVisible(true);
-        f.setSize(900,500);
-        f.setLocation(400,100);
+        
     }
 
     public void actionPerformed(ActionEvent ae){
         if(ae.getSource()==b && i==1){
             try{
                 conn con = new conn();
-                String str = "update employee set name='"+t1.getText()+"',fname='"+t2.getText()+"',age='"+age+"',dob='"+dat+"',addess='"+t3.getText()+"',phone='"+t4.getText()+"',email='"+t5.getText()+"',education='"+t6.getText()+"',post='"+t7.getText()+"',aadhar='"+t8.getText()+"',emp_id='"+t9.getText()+"' where emp_id='"+id_emp+"'";
+                String str = "update employee set name='"+t1.getText()+"',fname='"+t2.getText()+"',age='"+age+"',dob='"+dat+"',address='"+t3.getText()+"',phone='"+t4.getText()+"',email='"+t5.getText()+"',education='"+t6.getText()+"',post='"+t7.getText()+"',aadhar='"+t8.getText()+"',emp_id='"+t9.getText()+"' where emp_id='"+id_emp+"'";
                 con.s.executeUpdate(str);
-                JOptionPane.showMessageDialog(null,"successfully updated");
+                JOptionPane.showMessageDialog(null,"Details updated successfully");
                 f.setVisible(false);
-                new Search_Employee();
+                
             }catch(Exception e){
                 System.out.println("The error is:"+e);
             }

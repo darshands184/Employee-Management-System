@@ -1,0 +1,11 @@
+First you have to create a Database for your project.
+
+create database project1;
+
+
+
+Then You have to create two tables in that database.
+
+create table login(username varchar(20), password varchar(20));
+
+create table employee(name varchar(25), fname varchar(30), age varchar(10), dob varchar(20), address varchar(50), phone varchar(20), email varchar(30), education varchar(15), post varchar(15), aadhar varchar(20), emp_id varchar(10));

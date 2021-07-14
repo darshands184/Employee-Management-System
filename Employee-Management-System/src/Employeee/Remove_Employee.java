@@ -109,7 +109,7 @@ class Remove_Employee implements ActionListener{
         b2.setVisible(false);
 
         f.setSize(500,500);
-        f.setLocation(500,250);  
+        f.setLocation(500,150);  
         f.setVisible(true);
     }
     
@@ -146,7 +146,7 @@ class Remove_Employee implements ActionListener{
                 conn con = new conn();
                 String str = "delete from employee where emp_id = '"+t.getText()+"'";
                 con.s.executeUpdate(str);
-                JOptionPane.showMessageDialog(null,"deleted successfully");
+                JOptionPane.showMessageDialog(null,"Deleted successfully");
                 l2.setVisible(false);
                 l3.setVisible(false);
                 l4.setVisible(false);

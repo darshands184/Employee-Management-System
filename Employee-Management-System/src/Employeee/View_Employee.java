@@ -48,7 +48,7 @@ class View_Employee implements ActionListener{
         l1.add(b2);
 
         f.setSize(500,270);
-        f.setLocation(450,250);
+        f.setLocation(500,250);
         f.setVisible(true);
     }
     

@@ -65,7 +65,7 @@ class login  implements ActionListener{
 
         f.setVisible(true);
         f.setSize(600,300);
-        f.setLocation(400,300);
+        f.setLocation(450,250);
 
     }
 
@@ -82,9 +82,11 @@ class login  implements ActionListener{
             if(rs.next()){
                 new details().f.setVisible(true);
                 f.setVisible(false);
-            }else{
+            }
+            else{
                 JOptionPane.showMessageDialog(null, "Invalid login");
-                f.setVisible(false);
+                t1.setText("");
+                t2.setText("");
             }
         }catch(Exception e){
             e.printStackTrace();

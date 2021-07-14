@@ -25,7 +25,7 @@ class Print_Data implements ActionListener{
                 father = rs.getString("fname");
                 age = rs.getString("age");
                 dob = rs.getString("dob");
-                address = rs.getString("addess");
+                address = rs.getString("address");
                 phone = rs.getString("phone");
                 email = rs.getString("email");
                 education = rs.getString("education");
@@ -40,7 +40,7 @@ class Print_Data implements ActionListener{
         f=new JFrame("Print Data");
         f.setVisible(true);
         f.setSize(595,642);
-        f.setLocation(450,200);
+        f.setLocation(450,100);
         f.setBackground(Color.white);
         f.setLayout(null);
 
@@ -164,7 +164,7 @@ class Print_Data implements ActionListener{
     public void actionPerformed(ActionEvent ae){
 
         if(ae.getSource()==b1){
-            JOptionPane.showMessageDialog(null,"printed successfully");
+            JOptionPane.showMessageDialog(null,"Data Printed successfully");
             f.setVisible(false);
             details d=new details();
         }

@@ -10,11 +10,11 @@ public class conn{
     public conn(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            c = DriverManager.getConnection("jdbc:mysql:///project3","root","");
+            c = DriverManager.getConnection("jdbc:mysql://localhost:3308/ems","root","");
             s = c.createStatement();
         }catch(Exception e) {
             e.printStackTrace();
         }
     }
 }
- 
+

@@ -53,7 +53,7 @@ class Front_Page implements ActionListener{
 
         f.setVisible(true);
         f.setSize(1360,750);
-        f.setLocation(200,100);
+        f.setLocation(70,50);
 
         while(true){
             lid.setVisible(false); // lid =  j label

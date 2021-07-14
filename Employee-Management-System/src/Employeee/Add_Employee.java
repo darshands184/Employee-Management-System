@@ -138,7 +138,7 @@ class Add_Employee implements ActionListener{
 
         lab=new JLabel();
         lab.setBounds(200,450,250,200);
-	id15.add(lab);
+        id15.add(lab);
 
         lab1=new JLabel("");
         lab1.setBounds(600,450,250,200);
@@ -163,7 +163,7 @@ class Add_Employee implements ActionListener{
         
         f.setVisible(true);
         f.setSize(900,700);
-        f.setLocation(400,150);
+        f.setLocation(300,80);
     }
 
     public void actionPerformed(ActionEvent ae){
